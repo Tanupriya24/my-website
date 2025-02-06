@@ -16,12 +16,13 @@
       background: url('https://images.unsplash.com/photo-1619441207978-3d326c46e2c9?w=1920&auto=format&fit=crop&q=60&ixlib=rb-4.0.3') no-repeat center center/cover;
       min-height: 100vh;
       overflow-x: hidden;
+      background-attachment: fixed; /* Keep the background fixed during scrolling */
     }
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.9); /* Make the navbar more opaque */
       padding: 15px 20px;
       position: fixed;
       width: 100%;
@@ -90,10 +91,32 @@
       margin: 100px 20px 20px;
       border-radius: 10px;
     }
+
+    /* Media Queries for responsiveness */
     @media (max-width: 768px) {
       .menu {
+        flex-direction: row; /* Keep horizontal layout */
+        justify-content: center; /* Center items */
+        gap: 10px;
+      }
+
+      .container {
+        padding: 30px;
+        max-width: 95%;
+      }
+
+      .section {
+        margin: 20px 0;
+        padding: 20px;
+      }
+
+      .services {
         flex-direction: column;
-        text-align: center;
+        gap: 20px;
+      }
+
+      .service-box {
+        width: 100%;
       }
     }
   </style>
